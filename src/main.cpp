@@ -121,10 +121,12 @@ bool needingOfPitch = false;
 				}
 			}
 			auto fmod = FMODAudioEngine::sharedEngine();
-			if (m_player1->m_playerSpeed != m_fields->supposedSpeed) {
-				mGroup->setPitch(m_fields->pitch);
+			if (!m_player1->m_isPlatformer) {
+				if (m_player1->m_playerSpeed != m_fields->supposedSpeed) {
+					mGroup->setPitch(m_fields->pitch);
+				}
+				else if (m_player1->m_playerSpeed == m_fields->supposedSpeed) mGroup->setPitch(1.0f);
 			}
-			else if (m_player1->m_playerSpeed == m_fields->supposedSpeed) mGroup->setPitch(1.0f);
 		}
 	}
 	
