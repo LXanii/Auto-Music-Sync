@@ -1,0 +1,19 @@
+{
+	"geode": "2.0.0-beta.21",
+	"gd": "2.204",
+	"version": "v1.0.0",
+	"id": "xanii.auto_music_sync",
+	"name": "Auto Music Sync",
+	"developer": "Xanii",
+	"description": "Automatically syncs the music if you miss a speed portal",
+	"settings": {
+		"pixelBuffer" : {
+			"name": "Unit Distance",
+			"description": "This determines when the music will attempt to sync.\n<cr>DO NOT MESS WITH THIS IF YOU DO NOT KNOW WHAT YOU'RE DOING.</c>",
+			"type": "int",
+			"default": 28,
+			"max": 100,
+			"min": 0
+		}
+	}
+}
