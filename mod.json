@@ -9,10 +9,10 @@
 	"settings": {
 		"pixelBuffer" : {
 			"name": "Unit Distance",
-			"description": "This determines when the music will attempt to sync.\n<cr>DO NOT MESS WITH THIS IF YOU DO NOT KNOW WHAT YOU'RE DOING.</c>",
+			"description": "The higher this number is the more aggressive the music sync attempts will be.\n<cr>DO NOT MESS WITH THIS IF YOU DO NOT KNOW WHAT YOU'RE DOING.</c>",
 			"type": "int",
 			"default": 28,
-			"max": 100,
+			"max": 50,
 			"min": 0
 		}
 	}
