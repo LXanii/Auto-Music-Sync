@@ -29,9 +29,11 @@ void cleanVector(std::vector<int>& vector) {
 
 class $modify(ResetMusicLayer, PlayLayer) {
 
-float pitch = 1.0f;
-float supposedSpeed;
-bool needingOfPitch = false;
+	struct Fields {
+		float pitch = 1.0f;
+		float supposedSpeed;
+		bool needingOfPitch = false;
+	};
 
 	bool init(GJGameLevel *level, bool useReplay, bool dontCreateObjects) {
 		bool result = PlayLayer::init(level, useReplay, dontCreateObjects);
