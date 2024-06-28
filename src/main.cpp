@@ -75,7 +75,7 @@ class $modify(ResetMusicLayer, PlayLayer) {
 				}	
 		}
 		cleanVector(slowSpeed); cleanVector(normalSpeed); cleanVector(fastSpeed); cleanVector(fasterSpeed); cleanVector(fastestSpeed);
-		log::info("{} {} {} {} {}", slowSpeed, normalSpeed, fastSpeed, fasterSpeed, fastestSpeed);
+		//log::info("{} {} {} {} {}", slowSpeed, normalSpeed, fastSpeed, fasterSpeed, fastestSpeed);
 		return result;
 	}
 
@@ -89,35 +89,35 @@ class $modify(ResetMusicLayer, PlayLayer) {
 		if (m_fields->needingOfPitch) {
 			for (int i = 0; i < slowSpeed.size(); i++) {
 				if (std::abs(floor(m_player1->getPositionX()) - slowSpeed[i]) <= 5) {
-					log::debug("{} {} 0.7 {}", floor(m_player1->getPositionX()), m_player1->m_playerSpeed, slowSpeed[i]);
+					//log::debug("{} {} 0.7 {}", floor(m_player1->getPositionX()), m_player1->m_playerSpeed, slowSpeed[i]);
 					m_fields->supposedSpeed = 0.7;
 					m_fields->pitch = m_player1->m_playerSpeed / 0.7;
 				}
 			}
 			for (int i = 0; i < normalSpeed.size(); i++) {
 				if (std::abs(floor(m_player1->getPositionX()) - normalSpeed[i]) <= 5) {
-					log::debug("{} {} 0.9 {}", floor(m_player1->getPositionX()), m_player1->m_playerSpeed, normalSpeed[i]);
+					//log::debug("{} {} 0.9 {}", floor(m_player1->getPositionX()), m_player1->m_playerSpeed, normalSpeed[i]);
 					m_fields->supposedSpeed = 0.9;
 					m_fields->pitch = m_player1->m_playerSpeed / 0.9;
 				}
 			}
 			for (int i = 0; i < fastSpeed.size(); i++) {
 				if (std::abs(floor(m_player1->getPositionX()) - fastSpeed[i]) <= 5) {
-					log::debug("{} {} 1.1 {}", floor(m_player1->getPositionX()), m_player1->m_playerSpeed, fastSpeed[i]);
+					//log::debug("{} {} 1.1 {}", floor(m_player1->getPositionX()), m_player1->m_playerSpeed, fastSpeed[i]);
 					m_fields->supposedSpeed = 1.1;
 					m_fields->pitch = m_player1->m_playerSpeed / 1.1;
 				}
 			}
 			for (int i = 0; i < fasterSpeed.size(); i++) {
 				if (std::abs(floor(m_player1->getPositionX()) - fasterSpeed[i]) <= 5) {
-					log::debug("{} {} 1.3 {}", floor(m_player1->getPositionX()), m_player1->m_playerSpeed, fasterSpeed[i]);
+					//log::debug("{} {} 1.3 {}", floor(m_player1->getPositionX()), m_player1->m_playerSpeed, fasterSpeed[i]);
 					m_fields->supposedSpeed = 1.3;
 					m_fields->pitch = m_player1->m_playerSpeed / 1.3;
 				}
 			}
 			for (int i = 0; i < fastestSpeed.size(); i++) {
 				if (std::abs(floor(m_player1->getPositionX()) - fastestSpeed[i]) <= 5) {
-					log::debug("{} {} 1.6 {}", floor(m_player1->getPositionX()), m_player1->m_playerSpeed, fastestSpeed[i]);
+					//log::debug("{} {} 1.6 {}", floor(m_player1->getPositionX()), m_player1->m_playerSpeed, fastestSpeed[i]);
 					m_fields->supposedSpeed = 1.6;
 					m_fields->pitch = m_player1->m_playerSpeed / 1.6;
 				}
